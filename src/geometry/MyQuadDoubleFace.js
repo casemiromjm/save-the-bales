@@ -1,0 +1,89 @@
+import {CGFobject} from '../../lib/CGF.js';
+/**
+ * MyQuad
+ * @constructor
+ * @param {MyScene} scene - Reference to MyScene object
+ * @param {Array} coords - Array of texture coordinates (optional)
+ */
+export class MyQuadDoubleFace extends CGFobject {
+	constructor(scene, coords) {
+		super(scene);
+		this.initBuffers();
+		if (coords != undefined)
+			this.updateTexCoords(coords);
+	}
+	
+	initBuffers() {
+		this.vertices = [
+			// front
+			-0.5, -0.5, 0,	//0
+			0.5, -0.5, 0,	//1
+			-0.5, 0.5, 0,	//2
+			0.5, 0.5, 0,	//3
+			// back
+			-0.5, -0.5, 0,	//0
+			0.5, -0.5, 0,	//1
+			-0.5, 0.5, 0,	//2
+			0.5, 0.5, 0,	//3
+		];
+
+		//Counter-clockwise reference of vertices
+		this.indices = [
+			// front
+			0, 1, 2,
+			1, 3, 2,
+			// back
+			4, 6, 5,
+			5, 6, 7
+		];
+
+		this.normals = [
+			// front
+			0, 0, 1,
+			0, 0, 1,
+			0, 0, 1,
+			0, 0, 1,
+			// back
+			0, 0, -1,
+			0, 0, -1,
+			0, 0, -1,
+			0, 0, -1,
+		];
+		
+		/*
+		Texture coords (s,t)
+		+----------> s
+        |
+        |
+		|
+		v
+        t
+        */
+
+		this.texCoords = [
+			// front
+			0, 1,
+			1, 1,
+			0, 0,
+			1, 0,
+			// back
+			1, 1,
+			0, 1,
+			1, 0,
+			0, 0
+		]
+		this.primitiveType = this.scene.gl.TRIANGLES;
+		this.initGLBuffers();
+	}
+
+	/**
+	 * @method updateTexCoords
+	 * Updates the list of texture coordinates of the quad
+	 * @param {Array} coords - Array of texture coordinates
+	 */
+	updateTexCoords(coords) {
+		this.texCoords = [...coords];
+		this.updateTexCoordsGLBuffers();
+	}
+}
+
