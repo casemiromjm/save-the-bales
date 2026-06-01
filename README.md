@@ -1,6 +1,6 @@
 # Save The Bales!
 
-## Group T09G06
+## Group
 
 | Name              | Number    | E-Mail            |
 | ----------------- | --------- | ----------------- |
@@ -23,9 +23,8 @@ Gameplay focuses on precision and resource management. The player must battle a 
 First of all unzip the project and access its root directory:
 
 ```sh
-7z x project-t09g06.7z
-
-cd project-t09g06
+git clone git@github.com:casemiromjm/save-the-bales.git
+cd save-the-bales
 ```
 
 You should have three components. A `README.md` file (this), a `src/` folder with the project itself and a `lib/` folder with CGF library. 
@@ -34,13 +33,13 @@ For running the project it is only needed to start a HTTP local server, since th
 
 ### Using Python
 
-If you have Python 3 installead, you can easily start a server from your terminal:
+If you have Python 3 installed, you can easily start a server from your terminal:
 
 ```sh
 python -m http.server 8080
 ```
 
-Now you can access the [HTTP server](http://localhost:8080/project/) and check the game.
+Now you can access the [HTTP server](http://localhost:8080/src/) and check the game.
 
 ### Using VSCode Live Server
 
