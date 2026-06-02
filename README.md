@@ -27,8 +27,6 @@ git clone git@github.com:casemiromjm/save-the-bales.git
 cd save-the-bales
 ```
 
-You should have three components. A `README.md` file (this), a `src/` folder with the project itself and a `lib/` folder with CGF library. 
-
 For running the project it is only needed to start a HTTP local server, since the CGF library is shipped together with the project source code. There are a few ways to do this:
 
 ### Using Python
@@ -39,7 +37,7 @@ If you have Python 3 installed, you can easily start a server from your terminal
 python -m http.server 8080
 ```
 
-Now you can access the [HTTP server](http://localhost:8080/src/) and check the game.
+Now you can access the [HTTP server](http://localhost:8080/) and check the game.
 
 ### Using VSCode Live Server
 
