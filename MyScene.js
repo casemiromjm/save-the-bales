@@ -1,4 +1,4 @@
-import { CGFscene, CGFappearance, CGFtexture, CGFcamera, CGFaxis , CGFshader, CGFcameraAxisID  } from "../lib/CGF.js";
+import { CGFscene, CGFappearance, CGFtexture, CGFcamera, CGFaxis , CGFshader, CGFcameraAxisID  } from "./lib/CGF.js";
 import { MyHalfSphere } from "./geometry/MyHalfSphere.js";
 import { MyPlane } from "./geometry/MyPlane.js";
 import { MyRock } from "./objects/MyRock.js";
