@@ -1,4 +1,4 @@
-import { CGFobject, CGFappearance } from "../../lib/CGF.js";
+import { CGFobject, CGFappearance } from "../lib/CGF.js";
 import { CGFobjModel } from "../../lib/extra/CGFobjModel.js";
 
 const NEUTRAL_SCALE = 1.0 / 78.793;

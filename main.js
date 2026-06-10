@@ -1,5 +1,5 @@
 
-import {CGFapplication} from './lib/CGF.js';
+import {CGFapplication} from './src/lib/CGF.js';
 import { MyScene } from './src/MyScene.js';
 import { MyInterface } from './src/MyInterface.js';
 
