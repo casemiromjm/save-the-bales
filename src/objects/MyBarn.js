@@ -1,7 +1,7 @@
 import { MyUnitCubeQuad } from "../geometry/MyUnitCubeQuad.js";
 import { MyHalfPrism } from "../geometry/MyHalfPrism.js";
 import { MyHalfCircle } from "../geometry/MyHalfCircle.js";
-import { CGFobject, CGFappearance } from "../lib/CGF.js";
+import { CGFobject, CGFappearance } from "../../lib/CGF.js";
 
 export class MyBarn extends CGFobject {
     constructor(scene, woodTexture, frontTexture, sideTexture, roofTexture) {

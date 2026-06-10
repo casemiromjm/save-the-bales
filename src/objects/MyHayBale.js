@@ -1,4 +1,4 @@
-import { CGFobject } from "../lib/CGF.js";
+import { CGFobject } from "../../lib/CGF.js";
 import { MyUnitCubeQuad } from "../geometry/MyUnitCubeQuad.js";
 
 export class MyHayBale extends CGFobject {

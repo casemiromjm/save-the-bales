@@ -1,11 +1,11 @@
-import {CGFobject} from '../lib/CGF.js';
+import {CGFobject} from '../../lib/CGF.js';
 /**
  * MyQuad
  * @constructor
  * @param {MyScene} scene - Reference to MyScene object
  * @param {Array} coords - Array of texture coordinates (optional)
  */
-export class MyQuadDoubleFace extends CGFobject {
+export class MyQuad extends CGFobject {
 	constructor(scene, coords) {
 		super(scene);
 		this.initBuffers();
@@ -15,39 +15,26 @@ export class MyQuadDoubleFace extends CGFobject {
 	
 	initBuffers() {
 		this.vertices = [
-			// front
 			-0.5, -0.5, 0,	//0
 			0.5, -0.5, 0,	//1
 			-0.5, 0.5, 0,	//2
-			0.5, 0.5, 0,	//3
-			// back
-			-0.5, -0.5, 0,	//0
-			0.5, -0.5, 0,	//1
-			-0.5, 0.5, 0,	//2
-			0.5, 0.5, 0,	//3
+			0.5, 0.5, 0		//3
 		];
 
 		//Counter-clockwise reference of vertices
 		this.indices = [
-			// front
 			0, 1, 2,
 			1, 3, 2,
-			// back
-			4, 6, 5,
-			5, 6, 7
+			2, 1, 0,
+			2, 3, 1
 		];
 
+		//Facing Z positive
 		this.normals = [
-			// front
 			0, 0, 1,
 			0, 0, 1,
 			0, 0, 1,
-			0, 0, 1,
-			// back
-			0, 0, -1,
-			0, 0, -1,
-			0, 0, -1,
-			0, 0, -1,
+			0, 0, 1
 		];
 		
 		/*
@@ -61,16 +48,10 @@ export class MyQuadDoubleFace extends CGFobject {
         */
 
 		this.texCoords = [
-			// front
 			0, 1,
 			1, 1,
 			0, 0,
-			1, 0,
-			// back
-			1, 1,
-			0, 1,
-			1, 0,
-			0, 0
+			1, 0
 		]
 		this.primitiveType = this.scene.gl.TRIANGLES;
 		this.initGLBuffers();

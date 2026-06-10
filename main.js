@@ -1,7 +1,7 @@
 
 import {CGFapplication} from './lib/CGF.js';
-import { MyScene } from './MyScene.js';
-import { MyInterface } from './MyInterface.js';
+import { MyScene } from './src/MyScene.js';
+import { MyInterface } from './src/MyInterface.js';
 
 function main()
 {

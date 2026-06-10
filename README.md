@@ -64,7 +64,7 @@ _NOTE: Using `S` key only brakes the wagon, it does not move it backwards_
 
 ### Sky, clouds and sun
 
-The sky is implemented using a custom half-sphere geometry (MyHalfSphere) surrounding the scene, textured with a clear-sky image. The base sky texture is sampled normally, while an additional cloud-noise texture is sampled with a time-dependent horizontal offset in the fragment shader ([`sky.frag`](/project/shaders/sky/sky.frag)).
+The sky is implemented using a custom half-sphere geometry (MyHalfSphere) surrounding the scene, textured with a clear-sky image. The base sky texture is sampled normally, while an additional cloud-noise texture is sampled with a time-dependent horizontal offset in the fragment shader ([`sky.frag`](./src/shaders/sky/sky.frag)).
 
 The sun is also integrated in the sky shader. A sun texture is blended into a specific region of the sky using texture coordinates, allowing the sun to appear as part of the background dome. The main scene lighting was then adjusted to match the sun position visually.
 
@@ -74,7 +74,7 @@ In The sky shader-based animation the cloud layer scrolls over time through the 
 
 ### Terrain elevation
 
-The terrain elevation is made with a custom vertex shader ([`terrain.vert`](/project/shaders/terrain/terrain.vert)) that modifies the Z-coordinate of a plane. It utilizes a 2D value noise function to procedurally generate smooth hills and valleys based on the texture coordinates. 
+The terrain elevation is made with a custom vertex shader ([`terrain.vert`](./src/shaders/terrain/terrain.vert)) that modifies the Z-coordinate of a plane. It utilizes a 2D value noise function to procedurally generate smooth hills and valleys based on the texture coordinates. 
 
 The vertex shader calculates a `baseHeight` using the noise function and a `heightFactor` uniform. It then samples a `roadMask` texture to blend the procedural height down to exactly `0.0` wherever the path is drawn, ensuring a perfectly flat surface for the wagon to travel on.
 
@@ -133,7 +133,7 @@ The wagon includes a "Reset" functionality (mapped to the **R** key) that allows
 
 ### Barn
 
-The barn is constructed using composite geometry. The base is built with a custom [`MyUnitCubeQuad`](./geometry/MyUnitCubeQuad.js) which allows different textures to be applied to each face. The front, sides, and roof faces are textured with distinct maps ([`barnFront.jpg`](./textures/barn/barnFront.jpg), [`barnSide.jpg`](./textures/barn/barnSide.jpg), [`woodPlanks.jpg`](./textures/barn/woodPlanks.jpg)) to represent windows, doors, and wooden panels. The roof is composed of a [`MyHalfPrism`](./geometry/MyHalfPrism.js) and two [`MyHalfCircle`](./geometry/MyHalfCircle.js) caps. This way we were able to have different textures for the caps and have a better looking barn. We also have a delimited circular area in front of the barn to show where the user can drop the bales.
+The barn is constructed using composite geometry. The base is built with a custom [`MyUnitCubeQuad`](./src/geometry/MyUnitCubeQuad.js) which allows different textures to be applied to each face. The front, sides, and roof faces are textured with distinct maps ([`barnFront.jpg`](./src/textures/barn/barnFront.jpg), [`barnSide.jpg`](./src/textures/barn/barnSide.jpg), [`woodPlanks.jpg`](./src/textures/barn/woodPlanks.jpg)) to represent windows, doors, and wooden panels. The roof is composed of a [`MyHalfPrism`](./src/geometry/MyHalfPrism.js) and two [`MyHalfCircle`](./src/geometry/MyHalfCircle.js) caps. This way we were able to have different textures for the caps and have a better looking barn. We also have a delimited circular area in front of the barn to show where the user can drop the bales.
 
 #### Bonus
 
