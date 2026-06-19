@@ -1,5 +1,7 @@
 # Save The Bales!
 
+You can check the game [here](https://casemiromjm.me/save-the-bales/src/).
+
 ## Group
 
 | Name              | Number    | E-Mail            |
@@ -37,7 +39,7 @@ If you have Python 3 installed, you can easily start a server from your terminal
 python -m http.server 8080
 ```
 
-Now you can access the [HTTP server](http://localhost:8080/) and check the game.
+Now you can access the [HTTP server](http://localhost:8080/src) and check the game.
 
 ### Using VSCode Live Server
 
