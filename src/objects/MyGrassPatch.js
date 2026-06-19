@@ -1,4 +1,4 @@
-import { CGFobject, CGFappearance } from "../lib/CGF.js";
+import { CGFobject, CGFappearance } from "../../lib/CGF.js";
 import { MyGrass } from "./MyGrass.js";
 
 export class MyGrassPatch extends CGFobject {

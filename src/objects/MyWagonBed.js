@@ -1,4 +1,4 @@
-import { CGFobject, CGFappearance } from "../lib/CGF.js";
+import { CGFobject, CGFappearance } from "../../lib/CGF.js";
 import { MyQuadDoubleFace } from "../geometry/MyQuadDoubleFace.js";
 
 export class MyWagonBed extends CGFobject{

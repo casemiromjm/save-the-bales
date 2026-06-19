@@ -1,4 +1,4 @@
-import { CGFobject, CGFappearance } from "../lib/CGF.js";
+import { CGFobject, CGFappearance } from "../../lib/CGF.js";
 import { MyCylinder } from "../geometry/MyCylinder.js";
 
 export class MyWagonTongue extends CGFobject{
