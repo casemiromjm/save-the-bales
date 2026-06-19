@@ -54,10 +54,10 @@ export class MyScene extends CGFscene {
     this.ground =  new MyPlane(this, 50);
     this.arrow = new MyArrow(this);
     
-    this.rockTexture = new CGFtexture(this, "src/textures/terrain/rock.png");
-    this.graniteTexture = new CGFtexture(this, "src/textures/terrain/granite.png");
-    this.haywireTexture = new CGFtexture(this, "src/textures/haywire.png");
-    this.hayTexture = new CGFtexture(this, "src/textures/hayTexture.png");
+    this.rockTexture = new CGFtexture(this, "textures/terrain/rock.png");
+    this.graniteTexture = new CGFtexture(this, "textures/terrain/granite.png");
+    this.haywireTexture = new CGFtexture(this, "textures/haywire.png");
+    this.hayTexture = new CGFtexture(this, "textures/hayTexture.png");
     this.hayBaleObject = new MyHayBale(this, this.haywireTexture, this.hayTexture); 
     this.rockMaterial = new CGFappearance(this);
     this.rockMaterial.setAmbient(1, 1, 1, 1.0); 
@@ -114,12 +114,12 @@ export class MyScene extends CGFscene {
     this.lKeyWasPressed = false;
     this.lastCollectedHayPosition = null;
      
-    this.baseSkyTexture = new CGFtexture(this, "src/textures/sky/clearSky.jpg");
-    this.skyCloudTexture = new CGFtexture(this, "src/textures/sky/skyCloudNoise.jpg");
-    this.sunTexture = new CGFtexture(this, "src/textures/sky/sun.png");
-    this.grassTexture = new CGFtexture(this,"src/textures/terrain/grass_official.png");
-    this.dirtTexture = new CGFtexture(this, "src/textures/terrain/dirt3.jpg");
-    this.roadMaskTexture = new CGFtexture(this, "src/textures/terrain/roadMask6.png");
+    this.baseSkyTexture = new CGFtexture(this, "textures/sky/clearSky.jpg");
+    this.skyCloudTexture = new CGFtexture(this, "textures/sky/skyCloudNoise.jpg");
+    this.sunTexture = new CGFtexture(this, "textures/sky/sun.png");
+    this.grassTexture = new CGFtexture(this,"textures/terrain/grass_official.png");
+    this.dirtTexture = new CGFtexture(this, "textures/terrain/dirt3.jpg");
+    this.roadMaskTexture = new CGFtexture(this, "textures/terrain/roadMask6.png");
   
     this.skySphereMaterial = new CGFappearance(this);
     this.skySphereMaterial.setAmbient(1, 1, 1, 1.0); 
@@ -131,10 +131,10 @@ export class MyScene extends CGFscene {
 
     // shaders
 
-    this.skyShader = new CGFshader(this.gl, "src/shaders/sky/sky.vert" , "src/shaders/sky/sky.frag");
-    this.terrainShader = new CGFshader(this.gl, "src/shaders/terrain/terrain.vert" , "src/shaders/terrain/terrain.frag");
-    this.windShader = new CGFshader(this.gl, "src/shaders/wind/wind.vert" , "src/shaders/wind/wind.frag");
-    this.arrowShader = new CGFshader(this.gl, "src/shaders/arrow/arrow.vert" , "src/shaders/arrow/arrow.frag");
+    this.skyShader = new CGFshader(this.gl, "shaders/sky/sky.vert" , "shaders/sky/sky.frag");
+    this.terrainShader = new CGFshader(this.gl, "shaders/terrain/terrain.vert" , "shaders/terrain/terrain.frag");
+    this.windShader = new CGFshader(this.gl, "shaders/wind/wind.vert" , "shaders/wind/wind.frag");
+    this.arrowShader = new CGFshader(this.gl, "shaders/arrow/arrow.vert" , "shaders/arrow/arrow.frag");
 
     this.skyShader.setUniformsValues({ 
       uSampler1 : 0,
@@ -171,17 +171,17 @@ export class MyScene extends CGFscene {
       timeFactor: 0,
       arrowColor: [0.0,0.75,0.0]
     })
-    this.pulsatingShader = new CGFshader(this.gl, "src/shaders/pulsating/pulsating.vert", "src/shaders/pulsating/pulsating.frag")
+    this.pulsatingShader = new CGFshader(this.gl, "shaders/pulsating/pulsating.vert", "shaders/pulsating/pulsating.frag")
     this.pulsatingShader.setUniformsValues({
       timeFactor: 0,
       circleColor: [0.8, 0.8, 0.0, 0.4],
     });
 
     // barn
-    this.woodTexture = new CGFtexture(this, "src/textures/barn/woodPlanks.jpg");
-    this.barnFrontTexture = new CGFtexture(this, "src/textures/barn/barnFront.jpg");
-    this.barnRoofTexture = new CGFtexture(this, "src/textures/barn/barnRoof.jpg");
-    this.barnSideTexture = new CGFtexture(this, "src/textures/barn/barnSide.jpg");
+    this.woodTexture = new CGFtexture(this, "textures/barn/woodPlanks.jpg");
+    this.barnFrontTexture = new CGFtexture(this, "textures/barn/barnFront.jpg");
+    this.barnRoofTexture = new CGFtexture(this, "textures/barn/barnRoof.jpg");
+    this.barnSideTexture = new CGFtexture(this, "textures/barn/barnSide.jpg");
     
     this.barn = new MyBarn(this, this.woodTexture, this.barnFrontTexture, this.barnSideTexture, this.barnRoofTexture);
 

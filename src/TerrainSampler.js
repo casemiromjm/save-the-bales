@@ -17,7 +17,7 @@ export class TerrainSampler {
         ctx.drawImage(img, 0, 0);
         this.roadMaskData = ctx.getImageData(0, 0, img.width, img.height);
     };
-    img.src = "src/textures/terrain/roadMask6.png";
+    img.src = "textures/terrain/roadMask6.png";
   }
 
   fract(x) {
